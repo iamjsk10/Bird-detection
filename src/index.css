@@ -23,3 +23,23 @@
   mix-blend-mode: multiply;
   background-blend-mode: multiply;
 }
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #EF4444; }
+}
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #EF4444;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
